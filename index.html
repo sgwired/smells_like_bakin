@@ -25,39 +25,63 @@
 		<div id="nav" class="grid_8 omega">
 			<ul>
 				<li class="about"><a href="#">About</a></li>
-				<li class="pricing"><a href="#">Cupcakes & Prices</a></li>
-				<li class="locations"><a href="#">Locations</a></li>
-				<li class="contact"><a href="#">Contact Us</a></li>
+				<li class="pricing"><a href="pricing.html">Cupcakes & Prices</a></li>
+				<li class="locations"><a href="locations.html">Locations</a></li>
+				<li class="contact"><a href="contact.html">Contact Us</a></li>
 			</ul>
 		</div>
 		
-		<div id="intro" class="grid_9">
-			<h1>Opposites really do attract, especially in our kitchen! We combine unexpected flavors that melt together to create ironically delicious desserts. </h1>
-			<p><a href="#" class="btn">Browse Our Cupcakes</a></p>
+<!-- Intro Images -->
+
+	<div id="intro-slider">
+		
+		<div id="intro-cupcakes" class="grid_12 omega">
+			
+			<div class="intro grid_9">
+				<h1 class="fittext">Opposites really do attract, especially in our kitchen! We combine unexpected flavors that melt together to create ironically delicious desserts. </h1>
+				<p><a href="pricing.html" class="btn">Browse Our Cupcakes</a></p>
+			</div>
+
+			<div class="intro-img grid_3 omega">
+				<object data="img/you-bake-me-blush.svg" type="image/svg+xml">
+				  <a href="you-bake-me-blush.svg">
+				    <!--[if lte IE 8 ]-->
+				      <img src="img/you-bake-me-blush.gif" alt="You Bake Me Blush">
+				    <!--![endif]-->
+				  </a>
+				</object>
+			</div>
 		</div>
-		<div id ="intro-img" class="grid_3">
-			<object data="img/you-bake-me-blush.svg" type="image/svg+xml">
-			    <!--[if lte IE 8 ]-->
-			      <img src="img/you-bake-me-blush.gif" alt="You Bake Me Blush">
-			    <!--![endif]-->
-			</object>
+
+ 
+		<div id="intro-locations" class="grid_12 omega">
+			
+			<div class="intro grid_8">
+				<h1 class="fittext">We're kicking taste buds in to high gear from the west to the east coast with our featured avacodo chocolate cupcake.</h1>
+				<p><a href="locations.html" class="btn">View Our Locations</a></p>
+			</div>
+
+			<div class="intro-img grid_4 omega">
+				<object data="img/love-at-first-bite.svg" type="image/svg+xml">
+				  <a href="love-at-first-bite.svg">
+				    <!--[if lte IE 8 ]-->
+				      <img src="img/love-at-first-bite.gif" alt="Love at First Bite">
+				    <!--![endif]-->
+				  </a>
+				</object>
+			</div>
 		</div>
-	
-		<div id="featured-cupcake" class="grid_7">
+
+	</div>
+
+<!-- End Intro Images -->
+<div id="featured-cupcake" class="grid_7">
 			<h2>Cupcake of the Week</h2>
 			<p>This week’s featured cupcake is the <a href="#">Avocado Chocolate cupcake</a>. It’s flavors will kick your taste buds into fiesta mode!</p>
 			
-				 <div data-picture data-alt="Avocado Chocolate Cupcake">
-			        <div data-src="external/imgs/avocado-small.jpg"></div>
-			        <div data-src="external/imgs/avocado-medium.jpg"     data-media="(min-width: 400px)"></div>
-			        <div data-src="external/imgs/avocado-large.jpg"      data-media="(min-width: 800px)"></div>
-			        <div data-src="external/imgs/avocado-extralarge.jpg" data-media="(min-width: 1000px)"></div>
-
-			        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-			        <noscript>
-			            <img src="external/imgs/avocado-small.jpg" alt="Avocado Chocolate Cupcake">
-			        </noscript>
-			    </div>
+        	<div id="featured-video">
+        		<iframe src="http://player.vimeo.com/video/50610288?title=0&amp;byline=0&amp;portrait=0" width="400" height="275" frameborder="0"></iframe>
+        	</div>
 
 		</div>
 		
@@ -127,9 +151,22 @@
 		</div>
 		
 	</div>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
 	<script src="external/matchmedia.js"></script>
 	<script src="picturefill.js"></script>
-	
+
+    <script src="jquery.fitvids.js"></script>
+  	 <script src="jquery.fittext.js"></script>
+
+    <script>
+          // Target your .container, .wrapper, .post, etc.
+          $("#featured-video").fitVids();
+     </script>
+
+	<script type="text/javascript">
+		$(".fittext").fitText(2.2);
+	</script>
 </body>
 </html>
